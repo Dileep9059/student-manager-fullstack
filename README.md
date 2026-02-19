@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# 🎓 Student Manager – Full Stack Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Full Stack CRUD application built using:
 
-## Available Scripts
+* ⚛️ React (Frontend)
+* ☕ Spring Boot (Backend)
+* 🐘 PostgreSQL (Database)
 
-In the project directory, you can run:
+The application allows users to:
 
-### `npm start`
+* Add Student
+* View Students
+* Delete Student
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Project Structure
 
-### `npm test`
+```
+full stack project
+│
+├── backend (Spring Boot API)
+└── frontend (React App)
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧰 Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Java 17 or above
+* Node.js
+* PostgreSQL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Backend Setup (Spring Boot)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1️⃣ Navigate to backend folder
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cd backend/SpringBootRestAPIProject
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2️⃣ Create PostgreSQL Database
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open PostgreSQL and run:
 
-## Learn More
+```
+CREATE DATABASE studentDatabase;
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Update application.properties if needed:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+```
 
-### Code Splitting
+### 3️⃣ Run Spring Boot Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For Windows:
 
-### Analyzing the Bundle Size
+```
+mvnw.cmd spring-boot:run
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For Mac/Linux:
 
-### Making a Progressive Web App
+```
+./mvnw spring-boot:run
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Backend runs on:
 
-### Advanced Configuration
+```
+http://localhost:8080
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Test API in browser:
 
-### Deployment
+```
+http://localhost:8080/students
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 💻 Frontend Setup (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1️⃣ Navigate to frontend folder
+
+```
+cd frontend
+```
+
+### 2️⃣ Install dependencies
+
+```
+npm install
+```
+
+### 3️⃣ Start React App
+
+```
+npm start
+```
+
+Frontend runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## ▶️ How to Run the Full Project
+
+You must run BOTH backend and frontend.
+
+Open two terminals:
+
+Terminal 1 → Run Backend
+
+```
+cd backend/SpringBootRestAPIProject
+mvnw.cmd spring-boot:run
+```
+
+Terminal 2 → Run Frontend
+
+```
+cd frontend
+npm start
+```
+
+Now open in browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📸 Features
+
+* Full CRUD operations
+* REST API integration
+* PostgreSQL database connection
+* Professional UI with React
+
+---
+
+## 👨‍💻 Author
+
+Dileep Potnuru
